@@ -5,6 +5,43 @@ body {
 	overflow: hidden;
 }
 
-/* canvas {
-	background: rgb(255, 255, 207);
-} */
+body {
+	background: url("./assets/bgr.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+
+.text {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	font-size: 120px;
+	font-weight: 400;
+	color: whitesmoke;
+	text-shadow: rgb(0, 93, 73) 0 0 50px;
+	pointer-events: none;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	transition: opacity 0.5s ease-in-out;
+	animation: blink 1.1s ease-in-out infinite;
+}
+
+.text svg {
+	filter: drop-shadow(0 0 50px rgb(0, 93, 73));
+	height: 120px;
+	width: auto;
+}
+
+canvas {
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0.4;
+	}
+}
